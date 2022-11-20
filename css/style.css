@@ -1,0 +1,316 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body{
+    position: relative;
+}
+.container, .second>li, .third>li{
+    background: #202020;
+}
+.header{
+    width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+}
+.first{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 20px 10px;
+    display: block;
+}
+.first>li{
+    text-transform: uppercase;
+    position: relative;
+}
+.second{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 15px;
+}
+.first>li:first-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.first>li:hover, .second>li:hover, .third>li:hover{
+    background: rgb(153, 149, 149);
+}
+.first>li:hover .second{
+    display: block;
+}
+.first>li:first-child:hover{
+    background: #202020;
+}
+.third{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: -120%;
+    padding-right: 15px;
+}
+.second>li:last-child{
+    position: relative;
+}
+.second>li:last-child:hover .third{
+    display: block;
+}
+.main{
+    width: 1300px;
+    margin: 50px auto;
+}
+p{
+    font-size: 22px;
+}
+.main>h1{
+    margin-bottom: 50px;
+}
+.main>div>h2{
+    font-size: 26px;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.active{
+    color: red;
+}
+.card > div{
+    display: inline-block;
+}
+.cards{
+    width: 400px;
+    font-size: 18px;
+    padding: 5px;
+}
+.card_box{
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+}
+div p{
+    text-align: justify;
+}
+div h2{
+    text-align: center;
+    font-weight: 800;
+    font-size: 22px;
+}
+h2, p{
+    margin: 10px;
+}
+.card{
+    width: 1200px;
+    margin: 0 auto;
+}
+.link{
+    text-align: center;
+    padding: 10px 0;
+}
+img, .card_box{
+    border-radius: 4px;
+}
+.card{
+    font-size: 0;
+}
+.title{
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    margin: 20px auto;
+    padding: 20px;
+}
+.content{
+    height: 150px;
+    overflow: hidden;
+}
+
+
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 10px;
+}
+.box{
+    display: inline-block;
+    position: relative;
+    margin: 20px;
+}
+.wrapper>h1{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.discription{
+    background: rgba(20, 18, 18, 0.2);
+    position: absolute;
+    display: none;
+    overflow: hidden;
+    height: 100px;
+    width: 600px;
+    top: 50%;
+    left: 50%;
+    margin-left: -300px;
+    margin-top: -50px;
+    z-index: 1;
+}
+.box:hover .discription{
+    display: block;
+}
+.discription p{
+    font-size: 18px;
+    color: white;
+    text-align: justify;
+    padding: 0 10px 5px;
+}
+
+.main>h1{
+    font-size: 38px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.float{
+    width: 1200px;
+}
+.float_in{
+    width: 400px;
+    height: 400px;
+    background: green;
+    outline: 1px solid red;
+    float: left;
+}
+.clearfix::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.yellow{
+    width: 800px;
+    float: left;
+}
+.yellow>div{
+    background: yellow;
+    height: 200px;
+    outline: 1px solid red;
+}
+.blue{
+    width: 400px;
+    float: left;
+}
+.blue>div{
+    background: blue;
+    height: 133px;
+    outline: 1px solid red;
+}
+.pink{
+    width: 400px;
+    height: 400px;
+    background: pink;
+    outline: 1px solid red;
+    float: left;
+}
+.float_box{
+    width: 800px;
+    float: left;
+}
+.grey{
+    height: 200px;
+    background: grey;
+    outline: 1px solid red;
+}
+.violet{
+    height: 200px;
+    width: 400px;
+    background: violet;
+    outline: 1px solid red;
+    float: left;
+}
+.orange{
+    width: 400px;
+    float: left;
+}
+.orange>div{
+    height: 100px;
+    background: orange;
+    outline: 1px solid red;
+}
+
+
+td, table, th, tr{
+    border: 1px solid black;
+}
+td, tr{
+    height: 80px;
+    width: 80px;
+}
+table{
+    margin: 40px auto;
+}
+.green_color{
+    background: rgb(5, 78, 9);
+}
+.yellow_color{
+    background: yellow;
+}
+.orange_color{
+    background: orange;
+}
+.blue_color{
+    background: blue;
+}
+
