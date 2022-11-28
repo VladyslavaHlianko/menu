@@ -314,3 +314,24 @@ table{
     background: blue;
 }
 
+.footer_wrap{
+    background: #202020;
+}
+.footer{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+.footer a{
+    padding-right: 25px;
+    display: inline-block;
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    fill: white;
+}
+.icon:hover{
+    fill: rgb(255, 187, 0);
+}
