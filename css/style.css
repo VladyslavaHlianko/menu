@@ -55,6 +55,12 @@ body{
     width: 1300px;
     margin: 0 auto;
     position: relative;
+}
+.container{
+    position: fixed;
+    right: 0;
+    top: 0;
+    left: 0;
     z-index: 5;
 }
 .first{
@@ -69,47 +75,56 @@ li a{
     padding: 20px 10px;
     display: block;
 }
+.first>li:first-child a{
+    padding: 0;
+}
 .first>li{
     text-transform: uppercase;
     position: relative;
 }
 .second{
-    display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    opacity: 0;
+    top: -1000%;
+    right: 0;
     padding-top: 15px;
+    text-align: center;
+    transition: top .8s cubic-bezier(.15,.38,.46,1.35), opacity 1.5s linear;
 }
 .first>li:first-child{
     position: absolute;
-    top: 0;
+    top: auto;
     left: 0;
 }
 .first>li:hover, .second>li:hover, .third>li:hover{
     background: rgb(153, 149, 149);
 }
 .first>li:hover .second{
-    display: block;
+    top: 100%;
+    opacity: 1;
 }
 .first>li:first-child:hover{
     background: #202020;
 }
 .third{
-    display: none;
     position: absolute;
-    top: 0;
-    left: -120%;
+    bottom: 0;
+    right: 0;
     padding-right: 15px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: right .8s cubic-bezier(.15,.38,.46,1.35), opacity 1.5s linear;
 }
 .second>li:last-child{
     position: relative;
 }
 .second>li:last-child:hover .third{
-    display: block;
+    right: 100%;
+    opacity: 1;
 }
 .main{
     width: 1300px;
-    margin: 50px auto;
+    margin: 100px auto;
 }
 p{
     font-size: 22px;
@@ -127,6 +142,10 @@ table {
 }
 .active{
     color: red;
+}
+.active svg{
+    fill: rgb(255, 187, 0);
+    
 }
 .card > div{
     display: inline-block;
@@ -170,8 +189,8 @@ img, .card_box{
     text-align: center;
     font-size: 32px;
     font-weight: 800;
-    margin: 20px auto;
-    padding: 20px;
+    margin: 0 auto 20px;
+    padding: 100px 0 20px;
 }
 .content{
     height: 150px;
@@ -183,7 +202,7 @@ img, .card_box{
     width: 1200px;
     margin: 0 auto;
     text-align: center;
-    padding: 50px 10px;
+    padding: 100px 10px;
 }
 .box{
     display: inline-block;
@@ -322,16 +341,30 @@ table{
     margin: 0 auto;
     text-align: center;
     padding: 10px;
+    font-size: 0;
 }
 .footer a{
-    padding-right: 25px;
+    margin-right: 25px;
     display: inline-block;
+    font-size: 16px;
+}
+.footer a:last-child{
+    padding: 0;
 }
 .icon{
     width: 30px;
     height: 30px;
     fill: white;
 }
-.icon:hover{
+.icon:hover, .flex:hover svg{
     fill: rgb(255, 187, 0);
+}
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.flex .icon{
+    width: 25px;
+    height: 25px;
 }
