@@ -47,6 +47,7 @@ table {
 
 body{
     position: relative;
+    background: linear-gradient(to top left, rgb(222, 240, 85), rgb(236, 117, 249));
 }
 .container, .second>li, .third>li{
     background: #202020;
@@ -86,6 +87,7 @@ li a{
     position: absolute;
     opacity: 0;
     top: -1000%;
+    z-index: 10;
     right: 0;
     padding-top: 15px;
     text-align: center;
@@ -109,6 +111,7 @@ li a{
 .third{
     position: absolute;
     bottom: 0;
+    z-index: -1;
     right: 0;
     padding-right: 15px;
     white-space: nowrap;
@@ -159,6 +162,14 @@ table {
     border: 1px solid grey;
     padding: 10px;
     text-align: center;
+    overflow: hidden;
+    background: linear-gradient(rgb(108, 109, 104), rgb(162, 164, 162),rgb(237, 241, 237));
+}
+.card_box img{
+    transition: all 0.9s ease;
+}
+.card_box:hover img{
+    transform: scale(1.1);
 }
 div p{
     text-align: justify;
@@ -179,6 +190,13 @@ h2, p{
     text-align: center;
     padding: 10px 0;
 }
+.link a{
+    text-decoration: none;
+    color: rgb(255, 110, 7);
+}
+.link:hover a{
+    color: rgb(135, 125, 125);
+}
 img, .card_box{
     border-radius: 4px;
 }
@@ -195,8 +213,17 @@ img, .card_box{
 .content{
     height: 150px;
     overflow: hidden;
+    position: relative;
 }
-
+.content::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100px;
+    width: 100%;
+    /* background: linear-gradient(transparent, rgb(192, 190, 190)); */
+}
 
 .wrapper{
     width: 1200px;
@@ -340,7 +367,7 @@ table{
     width: 1000px;
     margin: 0 auto;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     font-size: 0;
 }
 .footer a{
@@ -367,4 +394,57 @@ table{
 .flex .icon{
     width: 25px;
     height: 25px;
+}
+
+
+.fixed_box{
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    width: 200px;
+    transform: translateY(75%);
+    transition: all 0.9s ease;
+    text-align: center;
+}
+.fixed_box>.title{
+    background: #202020;
+    padding: 17px;
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+}
+.fixed_box:hover{
+    transform: translateY(0);
+}
+.fixed_content{
+    background: rgb(230, 230, 23);
+    padding: 30px 40px;
+}
+.fixed_content li{
+    border: 1px solid black;
+}
+.fixed_content li:hover{
+    background: rgb(249, 185, 11);
+}
+.fixed_content svg{
+    fill: black;
+    transform: rotate(315deg);
+}
+.fixed_content a:hover svg{
+    fill: rgb(111, 0, 255);
+}
+.fixed_content a:hover{
+    transform: rotate(1turn);
+}
+.fixed_content ul{
+    display: flex;
+    gap: 15px;
+    flex-flow: row wrap;
+    justify-content: center;
+    transform: rotate(45deg);
+}
+.fixed_content a{
+    display: block;
+    padding: 5px;
+    transition: all 0.5s ease;
 }
