@@ -98,6 +98,19 @@ li a{
     top: auto;
     left: 0;
 }
+.logo{
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    stroke-dasharray: 83;
+    stroke-dashoffset: 83;
+    animation: text 3s ease .3s forwards;
+}
+@keyframes text {
+    100%{
+        stroke-dashoffset: 0; 
+    }
+}
 .first>li:hover, .second>li:hover, .third>li:hover{
     background: rgb(153, 149, 149);
 }
@@ -107,6 +120,20 @@ li a{
 }
 .first>li:first-child:hover{
     background: #202020;
+}
+.first>li:last-child{
+    background: url('../3.png');
+    position: absolute;
+    top: -15px;
+    right: 0;
+    width: 80px;
+    height: 80px;
+    animation: girl .6s steps(6) infinite;
+}
+@keyframes girl {
+    100%{
+        background-position: -482px;
+    }
 }
 .third{
     position: absolute;
@@ -128,6 +155,7 @@ li a{
 .main{
     width: 1300px;
     margin: 100px auto;
+    position: relative;
 }
 p{
     font-size: 22px;
@@ -402,7 +430,7 @@ table{
     bottom: 0;
     right: 50px;
     width: 200px;
-    transform: translateY(75%);
+    transform: translateY(calc(100% - 54px));
     transition: all 0.9s ease;
     text-align: center;
 }
@@ -412,9 +440,13 @@ table{
     margin: 0;
     font-size: 20px;
     color: #fff;
+    animation: move .4s ease infinite;
 }
 .fixed_box:hover{
     transform: translateY(0);
+}
+.fixed_box:hover .title{
+    animation: none;
 }
 .fixed_content{
     background: rgb(230, 230, 23);
@@ -428,7 +460,7 @@ table{
 }
 .fixed_content svg{
     fill: black;
-    transform: rotate(315deg);
+    transform: rotate(-45deg);
 }
 .fixed_content a:hover svg{
     fill: rgb(111, 0, 255);
@@ -448,3 +480,36 @@ table{
     padding: 5px;
     transition: all 0.5s ease;
 }
+
+@keyframes move {
+    0%{
+        transform: skew(-4deg) translateY(5%);
+    }
+    25%{
+        transform: skew(4deg) translateY(-5%);
+    }
+    50%{
+        transform: skew(-4deg) translateY(5%);
+    }
+    75%{
+        transform: skew(4deg) translateY(-5%);
+    }
+    100%{
+        transform: skew(-4deg) translateY(5%);
+    }
+}
+/* .img{
+    background: url("../4.png");
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 73px;
+    height: 100px;
+    animation: play 1s steps(10) infinite;
+}
+@keyframes play {
+    100%{
+        background-position: -736px;
+    }
+} */
